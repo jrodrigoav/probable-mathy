@@ -23,7 +23,7 @@ export function AdditionsPage() {
        <div className="col-12">
             <h2 className="text-center my-4">Additions <button type="button" className="btn btn-primary" onClick={handleLoad}>🔃</button></h2>
             <div className="row">
-                {problems.map((item, index) => <AdditionCard key={index} addition={item} />)}
+                {problems.map((item) => <AdditionCard key={item.index} addition={item} />)}
             </div>
         </div>
     </div>
