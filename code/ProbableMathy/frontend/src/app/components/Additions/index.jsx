@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 export function AdditionsComponent({ additions }) {
     return (
-        <div className="col">
+        <div className="col-12">
             <h2 className="text-center my-4">Additions</h2>
             <div className="row">
                 {additions.map((item, index) => <AdditionCard key={index} addition={item} />)}
@@ -21,7 +21,7 @@ function AdditionCard({ addition }) {
 
     function handleFinish(event) {
         event.preventDefault();
-        const finito = !finish;
+        const finito = addition.a + addition.b == sum;
         setFinish(finito);
     }
 
@@ -33,10 +33,10 @@ function AdditionCard({ addition }) {
                     <input type="number" className="form-control" onChange={handleChange} value={sum} min="0" max="1000" step="1" placeholder="Result" />
                 </div>
                 <div className="col-auto">
-                    <button type="button" className="form-control" onClick={handleFinish}>🟰</button>
+                    <button type="button" className={finish ? "btn btn-success" : "btn btn-primary"} onClick={handleFinish}>🟰</button>
                 </div>
                 <div className="card-footer text-body-secondary">
-                    {finish ? (addition.a + addition.b == sum ? '✅' : '❌') : '❓'}
+                    {sum == null ? '❓' : (finish ? '✅' : '❌')}
                 </div>
             </div>
         </div>

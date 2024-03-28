@@ -20,7 +20,7 @@ export function HomePage() {
   return (
     <div className="row">
       <div className="col-12">
-        <h2>Welcome</h2>
+        <h6>Welcome</h6>
         <button type="button" className="btn btn-primary" onClick={handleStart}>Start</button>        
       </div>
       <AdditionsComponent additions={problems}/>
