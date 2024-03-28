@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { NavigationComponent } from "./components/Navigation";
 import { AboutPage } from "./pages/About";
 import { HomePage } from "./pages/Home";
+import { AdditionsPage } from "./pages/Addition";
 const HEADER_NAME="SESSIONID";
 const createAppRouter = () => createBrowserRouter([
     {
@@ -11,6 +12,10 @@ const createAppRouter = () => createBrowserRouter([
             {
                 index: true,
                 element: <HomePage />
+            },
+            {
+                path: "addition",
+                element: <AdditionsPage />
             },
             {
                 path: "about",

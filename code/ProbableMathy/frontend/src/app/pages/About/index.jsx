@@ -5,7 +5,7 @@ export function AboutPage() {
       <div className="col">
         <h2>About</h2>
         <p>
-          Developed by: jesus.acedo@unosquare.com
+          Developed by: jesus.acedo@unosquare.com<br/>
           Version: 2024-03-27
         </p>
       </div>

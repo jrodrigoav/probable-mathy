@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import brandlogo from "../../../assets/brand.jpeg";
+import brandlogo from "../../../assets/favicon.png";
 export function NavigationComponent() {
     const location = useLocation();
     function isLinkActive(path) {
@@ -9,8 +9,8 @@ export function NavigationComponent() {
         <nav className="navbar navbar-expand-md bg-body-tertiary">
             <div className="container-fluid">
                 <Link className="navbar-brand" to="/">
-                    <img src={brandlogo} alt="Logo" width="200" height="150" />
-                    Mathematics
+                <img src={brandlogo} alt="Logo" width="50" height="50" />                    
+                    MathTrainer
                 </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarMain" aria-controls="navBarMain" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -26,6 +26,14 @@ export function NavigationComponent() {
                                 Home
                             </Link>
                         </li>
+                        <li className="nav-item">
+                            <Link
+                                className={`nav-link ${isLinkActive("/addition") ? "active" : ""}`}
+                                to="/addition"
+                            >
+                                Addition
+                            </Link>
+                        </li> 
                         <li className="nav-item">
                             <Link
                                 className={`nav-link ${isLinkActive("/about") ? "active" : ""}`}

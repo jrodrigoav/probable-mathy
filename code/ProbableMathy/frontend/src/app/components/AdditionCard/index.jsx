@@ -1,17 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
-export function AdditionsComponent({ additions }) {
-    return (
-        <div className="col-12">
-            <h2 className="text-center my-4">Additions</h2>
-            <div className="row">
-                {additions.map((item, index) => <AdditionCard key={index} addition={item} />)}
-            </div>
-        </div>
-    );
-}
 
-function AdditionCard({ addition }) {
+export function AdditionCard({ addition }) {
     const [sum, setSum] = useState(null)
     const [finish, setFinish] = useState(false);
     function handleChange(event) {
@@ -41,9 +31,6 @@ function AdditionCard({ addition }) {
             </div>
         </div>
     );
-}
-AdditionsComponent.propTypes = {
-    additions: PropTypes.array.isRequired
 }
 
 AdditionCard.propTypes = {

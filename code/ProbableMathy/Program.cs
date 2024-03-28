@@ -43,5 +43,6 @@ var app = builder.Build();
 
         return shuffledValues.Take(10);
     });
+    app.UseSpa(configuration => configuration.Options.DefaultPage = new Microsoft.AspNetCore.Http.PathString("/index.html"));
 }
 app.Run();
